@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Fin del Juego";
+}
+
+<h2>Juego terminado</h2>
+
+<p>Puntaje final: @ViewBag.Score</p>
+
+<a href="@Url.Action("Index", "Home")">Volver al inicio</a>
+<br>
+<a href="@Url.Action("Play", "Game")">Jugar de nuevo</a>

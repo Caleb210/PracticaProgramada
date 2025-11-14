@@ -1,0 +1,14 @@
+﻿#gameArea {
+    width: 400px;
+    height: 400px;
+    background: #eee;
+    position: relative;
+}
+
+#target {
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}

@@ -2522,23 +2522,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Soza\\.nuget\\packages\\": {},
+    "C:\\Users\\sauls\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Cuatri VI\\Progra Avanzada\\proyectoPrograAvanzada\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2.csproj",
+      "projectUniqueName": "C:\\Users\\sauls\\OneDrive\\Documentos\\OneDrive\\Programacion Avanzada\\Proyecto\\PracticaProgramada\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2.csproj",
       "projectName": "PracticaPrograma3_Grupo2",
-      "projectPath": "C:\\Cuatri VI\\Progra Avanzada\\proyectoPrograAvanzada\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2.csproj",
-      "packagesPath": "C:\\Users\\Soza\\.nuget\\packages\\",
-      "outputPath": "C:\\Cuatri VI\\Progra Avanzada\\proyectoPrograAvanzada\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2\\obj\\",
+      "projectPath": "C:\\Users\\sauls\\OneDrive\\Documentos\\OneDrive\\Programacion Avanzada\\Proyecto\\PracticaProgramada\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2.csproj",
+      "packagesPath": "C:\\Users\\sauls\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sauls\\OneDrive\\Documentos\\OneDrive\\Programacion Avanzada\\Proyecto\\PracticaProgramada\\PracticaPrograma3_Grupo2\\PracticaPrograma3_Grupo2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Soza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sauls\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2547,6 +2547,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

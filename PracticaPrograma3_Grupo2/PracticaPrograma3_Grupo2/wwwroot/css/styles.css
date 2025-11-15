@@ -12,3 +12,110 @@
     border-radius: 50%;
     position: absolute;
 }
+
+
+
+/* ============================= Para el Home ============================= */
+.card-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.btn-dark {
+    background-color: #333 !important;
+}
+
+
+
+
+    
+/* ============================= Este es el inicio del juego (Play) ============================= */
+.game-container {
+    width: 450px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial;
+}
+
+#gameArea {
+    width: 400px;
+    height: 400px;
+    border: 2px solid #333;
+    background: #f5f5f5;
+    margin: 15px auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+#target {
+    width: 45px;
+    height: 45px;
+    background: #ff4b5c;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+}
+
+.info-item {
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #ddd;
+}
+
+#pauseBtn {
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+    #pauseBtn:hover {
+        background: #555;
+    }
+
+.high-contrast {
+    background: black;
+    color: yellow;
+}
+
+    .high-contrast #gameArea {
+        background: #111;
+        border-color: yellow;
+    }
+
+
+
+
+/* ============================= Este es el Fin del juego (End) ============================= */
+
+.end-container {
+    width: 450px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: Arial;
+}
+
+.end-score {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.end-btn {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 18px;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+    .end-btn:hover {
+        background: #555;
+    }

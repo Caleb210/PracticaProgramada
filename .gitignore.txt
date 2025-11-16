@@ -1,0 +1,16 @@
+# Folders
+.vs/
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Build artifacts
+*.dll
+*.pdb
+
+# Other
+log/
+*.log

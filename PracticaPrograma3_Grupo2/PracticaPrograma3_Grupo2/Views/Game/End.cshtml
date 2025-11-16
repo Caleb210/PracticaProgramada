@@ -2,10 +2,13 @@
     ViewBag.Title = "Fin del Juego";
 }
 
-<h2>Juego terminado</h2>
+<div class="end-container">
 
-<p>Puntaje final: @ViewBag.Score</p>
+    <h2>¡Juego Terminado!</h2>
 
-<a href="@Url.Action("Index", "Home")">Volver al inicio</a>
-<br>
-<a href="@Url.Action("Play", "Game")">Jugar de nuevo</a>
+    <p class="end-score">Puntaje final: <strong>@ViewBag.Score</strong></p>
+
+    <a class="end-btn" href="@Url.Action("Play", "Game")">Jugar de nuevo</a>
+    <a class="end-btn" href="@Url.Action("Index", "Home")">Volver al inicio</a>
+
+</div>

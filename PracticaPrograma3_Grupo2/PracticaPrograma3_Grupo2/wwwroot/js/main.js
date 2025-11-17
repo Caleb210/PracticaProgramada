@@ -1,5 +1,40 @@
 ﻿$(document).ready(function () {
 
+    
+
+    const $btnHighContrast = $("#btnHighContrast");
+    const $btnFontUp = $("#btnFontUp");
+
+    if ($btnHighContrast.length) {
+        $btnHighContrast.on("click keydown", function (e) {
+            if (e.type === "click" || e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+
+                const isPressed = $(this).attr("aria-pressed") === "true";
+                const newState = !isPressed;
+
+                $(this).attr("aria-pressed", newState);
+                $("body").toggleClass("high-contrast", newState);
+            }
+        });
+    }
+
+    if ($btnFontUp.length) {
+        $btnFontUp.on("click keydown", function (e) {
+            if (e.type === "click" || e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+
+                const isPressed = $(this).attr("aria-pressed") === "true";
+                const newState = !isPressed;
+
+                $(this).attr("aria-pressed", newState);
+                $("html").css("font-size", newState ? "120%" : "100%");
+            }
+        });
+    }
+
+    
+
     const $target = $("#target");
 
     if ($target.length) {
@@ -12,6 +47,8 @@
         const $score = $("#score");
         const $time = $("#time");
         const $gameArea = $("#gameArea");
+        const $message = $("#message");
+        const $pauseBtn = $("#pauseBtn");
 
         function startGameUI() {
 
@@ -45,8 +82,6 @@
             }, 800);
         }
 
-
-
         function randomPosition() {
             let maxX = $gameArea.width() - $target.width();
             let maxY = $gameArea.height() - $target.height();
@@ -57,8 +92,6 @@
             return { left: x, top: y };
         }
 
-
-
         // Aqui se encuentra en FadeIn
         function showAndMoveTarget() {
             let pos = randomPosition();
@@ -66,9 +99,6 @@
                 .css({ left: pos.left, top: pos.top })
                 .fadeIn(400);
         }
-
-
-
 
         // Aqui se encuentra en FadeIn junto al FideOut
         function animateMoveTarget() {
@@ -83,16 +113,15 @@
             });
         }
 
-
-
-
         // En esta parte se suman los puntos
         function addPoint() {
             if (isPaused) return;
 
             score++;
             $score.text(score);
-            $("#message").text("¡Punto!");
+
+            // Mensaje accesible
+            $message.text("¡Punto! Puntaje " + score);
 
             $score
                 .stop(true)
@@ -100,18 +129,45 @@
                 .animate({ fontSize: "1.2rem" }, 150);
         }
 
+        // Click con mouse
         $target.on("click", function () {
             addPoint();
         });
 
-        $("#pauseBtn").on("click", function () {
-            isPaused = !isPaused;
-            $(this).text(isPaused ? "Reanudar" : "Pausar");
+        //  teclado para el target (Enter / Espacio)
+        $target.on("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                $(this).trigger("click"); // reutiliza la lógica de click
+            }
+        });
 
-            if (isPaused) {
-                $gameArea.animate({ opacity: 0.5 }, 200);
-            } else {
-                $gameArea.animate({ opacity: 1 }, 200);
+        //  estilos de foco para accesibilidad visual
+        $target.on("focus", function () {
+            $(this).addClass("target-focus");
+        });
+
+        $target.on("blur", function () {
+            $(this).removeClass("target-focus");
+        });
+
+        // Botón Pausar (mouse + teclado)
+        $pauseBtn.on("click keydown", function (e) {
+            if (e.type === "click" || e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+
+                isPaused = !isPaused;
+
+                $(this).text(isPaused ? "Reanudar" : "Pausar");
+                $(this).attr("aria-pressed", isPaused);
+
+                if (isPaused) {
+                    $gameArea.animate({ opacity: 0.5 }, 200);
+                    $message.text("Juego en pausa");
+                } else {
+                    $gameArea.animate({ opacity: 1 }, 200);
+                    $message.text("Juego reanudado");
+                }
             }
         });
 

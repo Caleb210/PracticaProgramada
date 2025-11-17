@@ -8,19 +8,36 @@
 
     <div class="info-box">
         <div class="info-item">
-            Puntaje: <span id="score" aria-live="polite">0</span>
+            Puntaje:
+            <span id="score" aria-live="polite">0</span>
         </div>
 
         <div class="info-item">
-            Tiempo: <span id="time">30</span>s
+            Tiempo:
+            <span id="time">30</span>s
         </div>
     </div>
 
-    <div id="gameArea">
-        <div id="target" tabindex="0"></div>
+    <div id="gameArea"
+         role="region"
+         aria-label="Área de juego donde aparece el objeto">
+        <div id="target"
+             tabindex="0"
+             role="button"
+             aria-label="Objeto que debes atrapar">
+        </div>
     </div>
 
-    <button id="pauseBtn">Pausar</button>
+    <button id="pauseBtn"
+            type="button"
+            aria-pressed="false">
+        Pausar
+    </button>
 
-    <div id="message" aria-live="polite" class="sr-only"></div>
+    <div id="message"
+         aria-live="polite"
+         aria-atomic="true"
+         class="sr-only">
+    </div>
 </div>
+
